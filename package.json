@@ -1,0 +1,29 @@
+{
+  "name": "irrlicht",
+  "version": "0.0.0",
+  "description": "Intercepting, Recording, Replaying HTTP Proxy",
+  "license": "MIT",
+  "keywords": [
+    "http",
+    "record",
+    "replay",
+    "mock",
+    "proxy",
+    "test"
+  ],
+  "main": "lib/irrlicht",
+  "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de/)",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "homepage": "https://github.com/jhermsmeier/node-irrlicht",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhermsmeier/node-irrlicht.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jhermsmeier/node-irrlicht/issues"
+  }
+}
