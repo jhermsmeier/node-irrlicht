@@ -8,3 +8,19 @@
 ```sh
 $ npm install irrlicht
 ```
+
+## Usage
+
+```js
+var Irrlicht = require( 'Irrlicht' )
+```
+
+```js
+var proxy = new Irrlicht({
+  // Optional. Key & cert for proxying HTTPS connections
+  ssl: {
+    key: '...',
+    cert: '...',
+  },
+})
+```
