@@ -14,7 +14,7 @@ var argv = require( 'yargs' )
     type: 'number',
   })
   .option( 'host', {
-    alias: 'h',
+    alias: 'H',
     describe: 'Hostname to bind to (optional)',
     type: 'string',
   })
