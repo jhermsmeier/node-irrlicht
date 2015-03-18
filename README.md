@@ -9,6 +9,20 @@
 $ npm install irrlicht
 ```
 
+## Command Line
+
+```
+Usage: irrlicht [options]
+
+Options:
+  -h, --help     Show help
+  -v, --version  Show version number
+  --port, -p     Port to run the proxy on                        [default: 8989]
+  --host, -H     Hostname to bind to (optional)
+  --cert         SSL Certificate path
+  --key          SSL Certificate Key path
+```
+
 ## Usage
 
 ```js
