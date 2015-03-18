@@ -11,12 +11,16 @@ $ npm install irrlicht
 
 ## Command Line
 
+```sh
+$ npm install --global irrlicht
+```
+
 ```
 Usage: irrlicht [options]
 
 Options:
-  -h, --help     Show help
-  -v, --version  Show version number
+  --help, -h     Show help
+  --version, -v  Show version number
   --port, -p     Port to run the proxy on                        [default: 8989]
   --host, -H     Hostname to bind to (optional)
   --cert         SSL Certificate path

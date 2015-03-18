@@ -3,10 +3,10 @@ var package = require( '../package' )
 var Irrlicht = require( '..' )
 var argv = require( 'yargs' )
   .usage( 'Usage: irrlicht [options]' )
-  .help( 'h' )
-  .alias( 'h', 'help' )
-  .version( package.version, 'v' )
-  .alias( 'v', 'version' )
+  .help( 'help' )
+  .alias( 'help', 'h' )
+  .version( package.version, 'version' )
+  .alias( 'version', 'v' )
   .option( 'port', {
     alias: 'p',
     default: 8989,
