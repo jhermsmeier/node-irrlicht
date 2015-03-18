@@ -37,9 +37,11 @@ var Irrlicht = require( 'Irrlicht' )
 ```js
 var proxy = new Irrlicht({
   // Optional. Key & cert for proxying HTTPS connections
+  // For details, see https://iojs.org/api/tls.html#tls_tls_createserver_options_secureconnectionlistener
   ssl: {
     key: '...',
     cert: '...',
+    ca: [ '...' ],
   },
 })
 ```
