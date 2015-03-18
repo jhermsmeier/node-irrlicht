@@ -29,5 +29,8 @@
   },
   "bugs": {
     "url": "https://github.com/jhermsmeier/node-irrlicht/issues"
+  },
+  "bin": {
+    "irrlicht": "bin/irrlicht.js"
   }
 }
