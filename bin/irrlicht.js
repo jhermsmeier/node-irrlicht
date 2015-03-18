@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 var package = require( '../package' )
+var fs = require( 'fs' )
 var Irrlicht = require( '..' )
 var argv = require( 'yargs' )
   .usage( 'Usage: irrlicht [options]' )
@@ -18,6 +19,10 @@ var argv = require( 'yargs' )
     describe: 'Hostname to bind to (optional)',
     type: 'string',
   })
+  .option( 'ca', {
+    describe: 'SSL CA Certificate path',
+    type: 'string',
+  })
   .option( 'cert', {
     describe: 'SSL Certificate path',
     type: 'string',
@@ -28,8 +33,16 @@ var argv = require( 'yargs' )
   })
   .argv
 
+function read( path ) {
+  return fs.readFileSync( path )
+}
+
 var proxy = new Irrlicht({
-  ssl: { key: argv.key, cert: argv.cert },
+  ssl: {
+    key: argv.key && read( argv.key ),
+    cert: argv.cert && read( argv.cert ),
+    ca: argv.ca && [ read( argv.ca ) ],
+  },
 })
 
 proxy.listen( argv.port, argv.host, function() {

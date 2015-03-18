@@ -23,6 +23,7 @@ Options:
   --version, -v  Show version number
   --port, -p     Port to run the proxy on                        [default: 8989]
   --host, -H     Hostname to bind to (optional)
+  --ca           SSL CA Certificate path
   --cert         SSL Certificate path
   --key          SSL Certificate Key path
 ```
