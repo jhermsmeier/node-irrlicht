@@ -19,6 +19,11 @@ var argv = require( 'yargs' )
     describe: 'Hostname to bind to (optional)',
     type: 'string',
   })
+  .option( 'mitm', {
+    default: false,
+    describe: 'Enable MITM on SSL/TLS',
+    type: 'boolean',
+  })
   .option( 'ca', {
     describe: 'SSL CA Certificate path',
     type: 'string',
@@ -38,6 +43,7 @@ function read( path ) {
 }
 
 var proxy = new Irrlicht({
+  mitm: argv.mitm,
   ssl: {
     key: argv.key && read( argv.key ),
     cert: argv.cert && read( argv.cert ),
