@@ -26,6 +26,7 @@ Options:
   --version, -v  Show version number
   --port, -p     Port to run the proxy on                        [default: 8989]
   --host, -H     Hostname to bind to (optional)
+  --mitm         Enable MITM on SSL/TLS                         [default: false]
   --ca           SSL CA Certificate path
   --cert         SSL Certificate path
   --key          SSL Certificate Key path
@@ -39,6 +40,9 @@ var Irrlicht = require( 'Irrlicht' )
 
 ```js
 var proxy = new Irrlicht({
+  // Whether to MITM on SSL/TLS with given certs,
+  // or if none are given, with local self-signed certs
+  mitm: false,
   // Optional. Key & cert for proxying HTTPS connections
   // For details, see https://iojs.org/api/tls.html#tls_tls_createserver_options_secureconnectionlistener
   ssl: {
