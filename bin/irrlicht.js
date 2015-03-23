@@ -19,6 +19,11 @@ var argv = require( 'yargs' )
     describe: 'Hostname to bind to (optional)',
     type: 'string',
   })
+  .option( 'no-cache', {
+    default: false,
+    describe: 'Force cache revalidation',
+    type: 'boolean',
+  })
   .option( 'mitm', {
     default: false,
     describe: 'Enable MITM on SSL/TLS',
