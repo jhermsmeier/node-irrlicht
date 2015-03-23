@@ -48,6 +48,7 @@ function read( path ) {
 }
 
 var proxy = new Irrlicht({
+  noCache: argv.noCache,
   mitm: argv.mitm,
   ssl: {
     key: argv.key && read( argv.key ),

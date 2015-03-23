@@ -67,6 +67,7 @@ proxy.listen( port[, host], function() {
 ### Function `new Irrlicht( options )`
 
 - **Object `options`:**
+  - **Boolean `noCache`:** Force cache revalidation
   - **Number `maxSockets`:** Maximum number of sockets for **each** server
   - **Object `ssl`:** For more detail, see [iojs.org/api/tls](https://iojs.org/api/tls.html#tls_tls_createserver_options_secureconnectionlistener)
     - **Buffer|String `key`:** The private key of the server in PEM format
