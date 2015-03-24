@@ -78,6 +78,8 @@ proxy.listen( port[, host], function() {
 
 #### Properties
 
+- **Boolean `noCache`:** Whether to force cache revalidation
+- **Boolean `mitm`:** Whether to MITM SSL/TLS connections
 - **String `socket`:** Filename of HTTPS socket
 - **Agent `httpAgent`:** HTTP socket pooling agent
 - **Agent `httpsAgent`:** HTTPS socket pooling agent
