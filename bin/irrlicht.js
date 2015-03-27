@@ -3,7 +3,9 @@ var package = require( '../package' )
 var fs = require( 'fs' )
 var Irrlicht = require( '..' )
 var argv = require( 'yargs' )
-  .usage( 'Usage: irrlicht [options]' )
+  .usage( 'Usage: irrlicht [command] [options]' )
+  .command( 'record', 'Record HTTP responses (implies MITM, no-cache)' )
+  .command( 'replay', 'Replay recorded HTTP responses (implies MITM)' )
   .help( 'help' )
   .alias( 'help', 'h' )
   .version( package.version, 'version' )
@@ -48,6 +50,8 @@ function read( path ) {
 }
 
 var proxy = new Irrlicht({
+  record: !!~argv._.indexOf( 'record' ),
+  replay: !!~argv._.indexOf( 'replay' ),
   noCache: argv.noCache,
   mitm: argv.mitm,
   ssl: {

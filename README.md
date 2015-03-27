@@ -19,7 +19,11 @@ $ npm install --global irrlicht
 ```
 
 ```
-Usage: irrlicht [options]
+Usage: irrlicht [command] [options]
+
+Commands:
+  record    Record HTTP responses (implies MITM, no-cache)
+  replay    Replay recorded HTTP responses (implies MITM)
 
 Options:
   --help, -h     Show help
@@ -41,6 +45,11 @@ var Irrlicht = require( 'Irrlicht' )
 
 ```js
 var proxy = new Irrlicht({
+  // Enable HTTP response recording
+  record: false,
+  // Enable HTTP response replay
+  // from storage
+  replay: false,
   // Whether to MITM on SSL/TLS with given certs,
   // or if none are given, with local self-signed certs
   mitm: false,
