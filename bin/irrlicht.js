@@ -10,6 +10,11 @@ var argv = require( 'yargs' )
   .alias( 'help', 'h' )
   .version( package.version, 'version' )
   .alias( 'version', 'v' )
+  .option( 'fixtures', {
+    alias: 'f',
+    describe: 'Fixture data path',
+    type: 'string',
+  })
   .option( 'port', {
     alias: 'p',
     default: 8989,
@@ -52,6 +57,7 @@ function read( path ) {
 var proxy = new Irrlicht({
   record: !!~argv._.indexOf( 'record' ),
   replay: !!~argv._.indexOf( 'replay' ),
+  path: argv.fixtures,
   noCache: argv.noCache,
   mitm: argv.mitm,
   ssl: {
