@@ -10,11 +10,6 @@ var argv = require( 'yargs' )
   .alias( 'help', 'h' )
   .version( package.version, 'version' )
   .alias( 'version', 'v' )
-  .option( 'fixtures', {
-    alias: 'f',
-    describe: 'Fixture data path',
-    type: 'string',
-  })
   .option( 'port', {
     alias: 'p',
     default: 8989,
@@ -23,13 +18,28 @@ var argv = require( 'yargs' )
   })
   .option( 'host', {
     alias: 'H',
-    describe: 'Hostname to bind to (optional)',
+    describe: 'Hostname to bind to',
     type: 'string',
   })
   .option( 'no-cache', {
     default: false,
     describe: 'Force cache revalidation',
     type: 'boolean',
+  })
+  .option( 'enable-network', {
+    default: false,
+    describe: 'Enable proxying to remotes during replay',
+    type: 'boolean',
+  })
+  .option( 'ignore-local', {
+    default: true,
+    describe: 'Record & replay on local network interfaces',
+    type: 'boolean',
+  })
+  .option( 'fixtures', {
+    alias: 'f',
+    describe: 'Fixture data path',
+    type: 'string',
   })
   .option( 'mitm', {
     default: false,
@@ -59,6 +69,8 @@ var proxy = new Irrlicht({
   replay: !!~argv._.indexOf( 'replay' ),
   path: argv.fixtures,
   noCache: argv.noCache,
+  enableNetwork: argv.enableNetwork,
+  ignoreLocal: argv.ignoreLocal,
   mitm: argv.mitm,
   ssl: {
     key: argv.key && read( argv.key ),
