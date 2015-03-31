@@ -47,28 +47,7 @@ var Irrlicht = require( 'Irrlicht' )
 ```
 
 ```js
-var proxy = new Irrlicht({
-  // Enable HTTP response recording
-  record: false,
-  // Enable HTTP response replay from storage
-  replay: false,
-  // Fixture data path
-  path: process.cwd() + 'fixtures'
-  // Enable proxying to remotes during HTTP replay
-  enableNetwork: false,
-  // Record & replay responses to local network interfaces
-  ignoreLocal: true,
-  // MITM on SSL/TLS with given certs,
-  // or if none are given, with local self-signed certs
-  mitm: false,
-  // Optional. Key & cert for proxying HTTPS connections
-  // For details, see https://iojs.org/api/tls.html#tls_tls_createserver_options_secureconnectionlistener
-  ssl: {
-    key: '...',
-    cert: '...',
-    ca: [ '...' ],
-  },
-})
+var proxy = new Irrlicht( options )
 ```
 
 ```js
@@ -84,8 +63,11 @@ proxy.listen( port[, host], function() {
 ### Function `new Irrlicht( options )`
 
 - **Object `options`:**
-  - **Boolean `record`:** Whether to record HTTP responses
-  - **Boolean `replay`:** Whether to replay saved HTTP responses
+  - **Boolean `record`:** Record HTTP responses
+  - **Boolean `replay`:** Replay saved HTTP responses
+  - **Boolean `enableNetwork`:** Enable proxying to remotes during HTTP replay
+  - **Boolean `ignoreLocal`:** Record & replay responses to local network interfaces
+  - **Boolean `replay`:** Replay saved HTTP responses
   - **String `path`:** Fixture data path
   - **Boolean `noCache`:** Force cache revalidation
   - **Number `maxSockets`:** Maximum number of sockets for **each** server
@@ -103,11 +85,13 @@ proxy.listen( port[, host], function() {
 - **Agent `httpsAgent`:** HTTPS socket pooling agent
 - **Server `http`:** HTTP server
 - **Server `https`:** HTTPS server
-- **Boolean `record`:** Whether to record HTTP responses
-- **Boolean `replay`:** Whether to replay saved HTTP responses
+- **Boolean `record`:** Record HTTP responses
+- **Boolean `replay`:** Replay saved HTTP responses
 - **String `path`:** Fixture data path
-- **Boolean `noCache`:** Whether to force cache revalidation
-- **Boolean `mitm`:** Whether to MITM SSL/TLS connections
+- **Boolean `enableNetwork`:** Enable proxying to remotes during HTTP replay
+- **Boolean `ignoreLocal`:** Record & replay responses to local network interfaces
+- **Boolean `noCache`:** Force cache revalidation
+- **Boolean `mitm`:** MITM SSL/TLS connections
 
 #### Methods
 
