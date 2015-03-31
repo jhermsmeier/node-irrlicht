@@ -98,9 +98,9 @@ proxy.listen( port[, host], function() {
 ##### `getRequestOptions( req )`
 ##### `handleConnect( req, socket, head )`
 ##### `handleRequest( req, res )`
-##### `proxy( req, res[, options] )`
-##### `record( req, res[, options] )`
-##### `replay( req, res[, options] )`
+##### `proxyRequest( req, res[, options] )`
+##### `recordRequest( req, res[, options] )`
+##### `replayRequest( req, res[, options] )`
 ##### `listen( port[, host][, callback] )`
 ##### `close( [callback] )`
 
