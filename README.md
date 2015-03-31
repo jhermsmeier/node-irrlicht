@@ -26,16 +26,18 @@ Commands:
   replay    Replay recorded HTTP responses (implies MITM)
 
 Options:
-  --help, -h      Show help
-  --version, -v   Show version number
-  --fixtures, -f  Fixture data path
-  --port, -p      Port to run the proxy on                       [default: 8989]
-  --host, -H      Hostname to bind to (optional)
-  --no-cache      Force cache revalidation                      [default: false]
-  --mitm          Enable MITM on SSL/TLS                        [default: false]
-  --ca            SSL CA Certificate path
-  --cert          SSL Certificate path
-  --key           SSL Certificate Key path
+  --help, -h        Show help
+  --version, -v     Show version number
+  --port, -p        Port to run the proxy on                     [default: 8989]
+  --host, -H        Hostname to bind to
+  --no-cache        Force cache revalidation                    [default: false]
+  --enable-network  Enable proxying to remotes during replay    [default: false]
+  --ignore-local    Record & replay on local network interfaces  [default: true]
+  --fixtures, -f    Fixture data path
+  --mitm            Enable MITM on SSL/TLS                      [default: false]
+  --ca              SSL CA Certificate path
+  --cert            SSL Certificate path
+  --key             SSL Certificate Key path
 ```
 
 ## Usage
@@ -52,7 +54,11 @@ var proxy = new Irrlicht({
   replay: false,
   // Fixture data path
   path: process.cwd() + 'fixtures'
-  // Whether to MITM on SSL/TLS with given certs,
+  // Enable proxying to remotes during HTTP replay
+  enableNetwork: false,
+  // Record & replay responses to local network interfaces
+  ignoreLocal: true,
+  // MITM on SSL/TLS with given certs,
   // or if none are given, with local self-signed certs
   mitm: false,
   // Optional. Key & cert for proxying HTTPS connections
