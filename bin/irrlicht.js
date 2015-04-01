@@ -21,19 +21,19 @@ var argv = require( 'yargs' )
     describe: 'Hostname to bind to',
     type: 'string',
   })
-  .option( 'no-cache', {
+  .option( 'enable-cache', {
     default: false,
-    describe: 'Force cache revalidation',
+    describe: 'Disable forced cache revalidation',
     type: 'boolean',
   })
-  .option( 'enable-network', {
-    default: false,
+  .option( 'disable-network', {
+    default: true,
     describe: 'Enable proxying to remotes during replay',
     type: 'boolean',
   })
   .option( 'ignore-local', {
     default: true,
-    describe: 'Record & replay on local network interfaces',
+    describe: 'Record & replay on local interfaces',
     type: 'boolean',
   })
   .option( 'fixtures', {
@@ -68,8 +68,8 @@ var proxy = new Irrlicht({
   record: !!~argv._.indexOf( 'record' ),
   replay: !!~argv._.indexOf( 'replay' ),
   path: argv.fixtures,
-  noCache: argv.noCache,
-  enableNetwork: argv.enableNetwork,
+  noCache: !argv.enableCache,
+  enableNetwork: !argv.disableNetwork,
   ignoreLocal: argv.ignoreLocal,
   mitm: argv.mitm,
   ssl: {

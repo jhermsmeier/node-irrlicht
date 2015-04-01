@@ -26,18 +26,18 @@ Commands:
   replay    Replay recorded HTTP responses (implies MITM)
 
 Options:
-  --help, -h        Show help
-  --version, -v     Show version number
-  --port, -p        Port to run the proxy on                     [default: 8989]
-  --host, -H        Hostname to bind to
-  --no-cache        Force cache revalidation                    [default: false]
-  --enable-network  Enable proxying to remotes during replay    [default: false]
-  --ignore-local    Record & replay on local network interfaces  [default: true]
-  --fixtures, -f    Fixture data path
-  --mitm            Enable MITM on SSL/TLS                      [default: false]
-  --ca              SSL CA Certificate path
-  --cert            SSL Certificate path
-  --key             SSL Certificate Key path
+  --help, -h         Show help
+  --version, -v      Show version number
+  --port, -p         Port to run the proxy on                    [default: 8989]
+  --host, -H         Hostname to bind to
+  --enable-cache     Disable forced cache revalidation          [default: false]
+  --disable-network  Enable proxying to remotes during replay    [default: true]
+  --ignore-local     Record & replay on local interfaces         [default: true]
+  --fixtures, -f     Fixture data path
+  --mitm             Enable MITM on SSL/TLS                     [default: false]
+  --ca               SSL CA Certificate path
+  --cert             SSL Certificate path
+  --key              SSL Certificate Key path
 ```
 
 ## Usage
