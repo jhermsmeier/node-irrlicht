@@ -1,15 +1,18 @@
 {
   "name": "irrlicht",
-  "version": "0.8.0",
-  "description": "Intercepting, Recording, Replaying HTTP Proxy",
+  "version": "0.12.1",
+  "description": "Intercepting, Recording, Replaying HTTP(S) Proxy",
   "license": "MIT",
   "keywords": [
     "http",
+    "https",
     "record",
     "replay",
     "mock",
     "proxy",
-    "test"
+    "test",
+    "intercept",
+    "mitm"
   ],
   "main": "lib/irrlicht",
   "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de/)",
@@ -17,11 +20,12 @@
     "async": "~0.9.0",
     "bl": "~0.9.4",
     "bloodline": "~1.0.0",
+    "cookie": "~0.1.2",
     "debug": "~2.1.3",
     "farmhash": "~1.0.0",
     "mkdirp": "~0.5.0",
     "path-to-regexp": "~1.0.3",
-    "yargs": "~3.6.0"
+    "yargs": "~3.7.0"
   },
   "devDependencies": {
     "mocha": "~2.2.1"
