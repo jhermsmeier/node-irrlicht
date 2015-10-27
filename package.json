@@ -1,6 +1,6 @@
 {
   "name": "irrlicht",
-  "version": "0.13.0",
+  "version": "0.13.1",
   "description": "Intercepting, Recording, Replaying HTTP(S) Proxy",
   "license": "MIT",
   "keywords": [
