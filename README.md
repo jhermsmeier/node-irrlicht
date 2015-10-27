@@ -1,7 +1,7 @@
 # Irrlicht
-[![npm](http://img.shields.io/npm/v/irrlicht.svg?style=flat-square)](https://npmjs.com/irrlicht)
-[![npm downloads](http://img.shields.io/npm/dm/irrlicht.svg?style=flat-square)](https://npmjs.com/irrlicht)
-[![build status](http://img.shields.io/travis/jhermsmeier/node-irrlicht.svg?style=flat-square)](https://travis-ci.org/jhermsmeier/node-irrlicht)
+[![npm](https://img.shields.io/npm/v/irrlicht.svg?style=flat-square)](https://npmjs.com/irrlicht)
+[![npm downloads](https://img.shields.io/npm/dm/irrlicht.svg?style=flat-square)](https://npmjs.com/irrlicht)
+[![build status](https://img.shields.io/travis/jhermsmeier/node-irrlicht.svg?style=flat-square)](https://travis-ci.org/jhermsmeier/node-irrlicht)
 
 **Irrlicht**, the German name for will-o'-the-wisp,
 the ghostly light sometimes seen at night over bogs and swamps.
@@ -43,7 +43,7 @@ Options:
 ## Usage
 
 ```js
-var Irrlicht = require( 'Irrlicht' )
+var Irrlicht = require( 'irrlicht' )
 ```
 
 ```js
