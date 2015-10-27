@@ -84,7 +84,6 @@ proxy.listen( port[, host], function() {
   - **Boolean `replay`:** Replay saved HTTP responses
   - **Boolean `enableNetwork`:** Enable proxying to remotes during HTTP replay
   - **Boolean `ignoreLocal`:** Record & replay responses to local network interfaces
-  - **Boolean `replay`:** Replay saved HTTP responses
   - **String `path`:** Fixture data path
   - **Boolean `noCache`:** Force cache revalidation
   - **Number `maxSockets`:** Maximum number of sockets for **each** server
