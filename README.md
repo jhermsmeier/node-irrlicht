@@ -126,4 +126,4 @@ proxy.listen( port[, host], function() {
 - `request` ( request, response )
 - `response` ( request, remoteResponse )
 - `listening`
-- `close`
+- `close` ( error )
