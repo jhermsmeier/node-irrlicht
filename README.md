@@ -12,6 +12,23 @@ the ghostly light sometimes seen at night over bogs and swamps.
 $ npm install irrlicht
 ```
 
+## Known Issues
+
+**Travis CI**  
+`Irrlicht` might not run on Travis CI out of the box.
+If you run into problems, add the following lines to your `.travis.yml` to work around this issue:
+
+```yml
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-4.8
+env:
+  CXX=g++-4.8
+```
+
 ## Command Line
 
 ```sh
