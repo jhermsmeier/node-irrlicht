@@ -17,18 +17,17 @@
   "main": "lib/irrlicht",
   "author": "Jonas Hermsmeier <jhermsmeier@gmail.com> (https://jhermsmeier.de/)",
   "dependencies": {
-    "async": "~1.5.0",
-    "bl": "~1.0.0",
+    "async": "^3.2.0",
+    "bl": "^4.0.2",
     "bloodline": "~1.0.0",
-    "cookie": "~0.2.3",
-    "debug": "~2.2.0",
-    "farmhash": "~1.1.0",
-    "mkdirp": "~0.5.1",
-    "path-to-regexp": "~1.2.1",
-    "yargs": "~3.29.0"
+    "cookie": "^0.4.1",
+    "debug": "^4.1.1",
+    "farmhash": "^3.0.0",
+    "path-to-regexp": "^6.1.0",
+    "yargs": "^15.3.1"
   },
   "devDependencies": {
-    "mocha": "~2.3.3"
+    "mocha": "^7.1.2"
   },
   "scripts": {
     "test": "mocha"
