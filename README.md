@@ -1,10 +1,21 @@
-# Irrlicht
-[![npm](https://img.shields.io/npm/v/irrlicht.svg?style=flat-square)](https://npmjs.com/irrlicht)
-[![npm downloads](https://img.shields.io/npm/dm/irrlicht.svg?style=flat-square)](https://npmjs.com/irrlicht)
-[![build status](https://img.shields.io/travis/jhermsmeier/node-irrlicht.svg?style=flat-square)](https://travis-ci.org/jhermsmeier/node-irrlicht)
-
-**Irrlicht**, the German name for will-o'-the-wisp,
-the ghostly light sometimes seen at night over bogs and swamps.
+<h1 align="center">
+  Irrlicht
+  <a href="https://www.npmjs.com/package/irrlicht">
+    <img src="https://flat.badgen.net/npm/v/irrlicht?label" alt="npm version" />
+  </a>
+</h1>
+<p align="center">
+  <em>Irrlicht</em>, the German word for a <em>wisp</em> (will-o'-the-wisp),<br>
+  the ghostly light sometimes seen at night over bogs and swamps.
+</p>
+<p align="center">
+  <a href="https://www.npmjs.com/package/irrlicht">
+    <img alt="npm downloads" src="https://flat.badgen.net/npm/dm/irrlicht" />
+  </a>
+  <a href="https://travis-ci.org/jhermsmeier/node-irrlicht">
+    <img alt="build status" src="https://flat.badgen.net/travis/jhermsmeier/node-irrlicht/master" />
+  </a>
+</p>
 
 ## Install via [npm](https://npmjs.com)
 
