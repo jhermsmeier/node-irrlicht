@@ -8,7 +8,7 @@ var argv = require( 'yargs' )
   .command( 'replay', 'Replay recorded HTTP responses (implies MITM)' )
   .help( 'help' )
   .alias( 'help', 'h' )
-  .version( package.version, 'version' )
+  .version( 'version', package.version )
   .alias( 'version', 'v' )
   .option( 'port', {
     alias: 'p',
