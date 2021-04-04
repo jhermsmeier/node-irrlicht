@@ -23,6 +23,7 @@
     "cookie": "^0.4.1",
     "debug": "^4.1.1",
     "farmhash": "^3.0.0",
+    "mkdirp": "^1.0.4",
     "path-to-regexp": "^6.1.0",
     "yargs": "^15.3.1"
   },
