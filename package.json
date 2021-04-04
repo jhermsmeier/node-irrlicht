@@ -19,7 +19,6 @@
   "dependencies": {
     "async": "^3.2.0",
     "bl": "^5.0.0",
-    "bloodline": "~1.0.0",
     "cookie": "^0.4.1",
     "debug": "^4.1.1",
     "farmhash": "^3.0.0",
